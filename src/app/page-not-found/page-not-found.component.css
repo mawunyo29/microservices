@@ -1,0 +1,12 @@
+@media (min-width: 640px) {
+    .sm\:max-w-md {
+      max-width: 28rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .lg\:px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  

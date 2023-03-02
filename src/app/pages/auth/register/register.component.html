@@ -1,0 +1,39 @@
+<div class="main even:translate-y-full">
+
+    <div class="card  translate-y-0 origin-top transform-gpu duration-500 ">
+        <h1 class="w-full text-center flex justify-center items-center justify-items-stretch text-5xl font-medium border-b border-collapse border-slate-900"> Register</h1>
+      
+        <form [formGroup]="formRegister" (ngSubmit)="register()">
+            <div class="card-content">
+                <label for="name" class="label">Name</label>
+               
+                <input type="text" aria-label="name" class="input" id="name" aria-placeholder="name" formControlName="name">
+             
+            </div>
+            <div class="card-content">
+                <label for="email" class="label">Email</label>
+                <input type="text" aria-label="email" class="input" id="email" aria-placeholder="email" formControlName="email">
+            </div>
+            <div class="card-content">
+                <label for="password"  class="label">Password</label>
+                <input type="password" aria-label="password" class="input" id="password" aria-placeholder="password" formControlName="password">
+            </div>
+            <div class="card-content" >
+                <label for="password_confirmation"  class="label">Password confirmation</label>
+                <input type="password" aria-label="password" class="input" id="password_confirmation" aria-placeholder="password" formControlName="password_confirmation">
+            </div>
+            
+            <div class="check-container ">
+                <div class="flex flex-col">
+                    <label for="role"  class="label">Terms</label>
+                    <input type="checkbox" class="checkbox">
+                </div>
+    
+            </div>
+            <div class=" flex justify-end py-2">
+                <button class="btn" type="submit">save</button>
+            </div>
+        </form>
+      
+    </div>
+</div>
