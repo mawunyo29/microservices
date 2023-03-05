@@ -38,6 +38,7 @@ export class RegisterComponent {
     this.authService.store( this.formRegister.value).pipe().subscribe(
       (data: any) => {
         console.log(data);
+        localStorage.setItem('token', data.token);
       },
       (error: any) => {
         console.log(error);

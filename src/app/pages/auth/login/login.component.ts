@@ -22,20 +22,14 @@ export class LoginComponent {
   }
 
   login(){
-    this.authService.loginGuard(this.formLogin.value).pipe().subscribe(
+    this.authService.authenticate(this.formLogin.value).pipe().subscribe(
       (data: any) => {
         console.log(data);
-        localStorage.setItem('token', data.oauth_token);
-        this.authService.hasToken = data.oauth_token;
-        this.authService.isLoggedIn = true;
-       
-        this.authUser = data;
+        this.router.navigate(['/dashboard']);
+
       },);
      
-      
-      this.formLogin.reset();
-     
-
+      // this.formLogin.reset();
     }
  
 }
